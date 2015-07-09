@@ -43,7 +43,7 @@ void Game::draw() {
 
 	// Render
 	switch (gameState) {
-	case gameStates::SceneMainMenu:
+		case gameStates::SceneMainMenu:
 			for (int i = 0; i < buttons.size(); i++)
 				buttons[i]->draw();
 			break;
@@ -145,10 +145,7 @@ void Game::run() {
 void Game::update() {
 	// Handle key states & update stuff
 	if (keys[SDLK_w]) {
-		if (gameState == gameStates::SceneMainMenu) {
-			gameState = gameStates::Running;
-			std::cout << "Switched game state to running" << std::endl;
-		}
+		
 	}
 }
 
@@ -161,7 +158,11 @@ void Game::onKeyUp(SDL_Event* evt) {
 }
 
 void Game::onMouseDown(SDL_Event* evt) {
-	
+	for (int i = 0; i < buttons.size(); i++) {
+		if (evt->button.x >= buttons[i]->x && evt->button.y >= buttons[i]->y && evt->button.x <= buttons[i]->x + buttons[i]->width && evt->button.y <= buttons[i]->y + buttons[i]->height) {
+			buttons[i]->click();
+		}
+	}
 }
 
 void Game::onMouseUp(SDL_Event* evt) {
@@ -169,5 +170,9 @@ void Game::onMouseUp(SDL_Event* evt) {
 }
 
 void Game::onMouseMotion(SDL_Event* evt) {
-
+	for (int i = 0; i < buttons.size(); i++) {
+		if (evt->motion.x >= buttons[i]->x && evt->motion.y >= buttons[i]->y && evt->motion.x <= buttons[i]->x + buttons[i]->width && evt->motion.y <= buttons[i]->y + buttons[i]->height) {
+			buttons[i]->hover();
+		}
+	}
 }
