@@ -11,7 +11,7 @@ class Game {
 		~Game();
 
 		enum gameStates {
-			MainMenu,
+			SceneMainMenu,
 			Running,
 			Menu,
 			Paused

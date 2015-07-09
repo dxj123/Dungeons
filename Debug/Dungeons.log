@@ -1,18 +1,20 @@
-﻿Build started 9-7-2015 17:44:49.
+﻿Build started 10-7-2015 0:10:53.
      1>Project "C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Dungeons\Dungeons.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
-         Game.cpp
-     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\game.cpp(47): warning C4018: '<' : signed/unsigned mismatch
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MainMenu.cpp
+         MainMenu.cpp
        Link:
-         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL_image.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.lib" /MACHINE:X86 Debug\Entity.obj
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL_image.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.lib" /MACHINE:X86 Debug\Button.obj
+         Debug\Entity.obj
          Debug\Game.obj
          Debug\Globals.obj
          Debug\Graphics.obj
          Debug\Main.obj
+         Debug\MainMenu.obj
+         Debug\UI.obj
          Dungeons.vcxproj -> C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.exe
      1>Done Building Project "C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Dungeons\Dungeons.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.89
+Time Elapsed 00:00:00.70

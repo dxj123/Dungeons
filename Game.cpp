@@ -4,13 +4,15 @@
 
 Game::Game() : frameSkip(0), running(0), window(NULL), renderer(NULL) {
 	// Init the application
-	gameState = gameStates::MainMenu;
+	gameState = gameStates::SceneMainMenu;
 
-	Entity Block1 = Entity();
-	Block1.x = 100;
-	Block1.y = 150;
+	Entity* Block1 = new Entity();
+	Block1->x = 100;
+	Block1->y = 150;
 
 	entities.push_back(Block1);
+
+	MainMenu* mainMenu = new MainMenu();
 }
 
 Game::~Game() {
@@ -41,13 +43,13 @@ void Game::draw() {
 
 	// Render
 	switch (gameState) {
-		case gameStates::MainMenu:
+	case gameStates::SceneMainMenu:
+			for (int i = 0; i < buttons.size(); i++)
+				buttons[i]->draw();
 			break;
 		case gameStates::Running:
-			for (int i = 0; i < entities.size(); i++) {
-				Entity cEntity = entities[i];
-				cEntity.draw();
-			}
+			for (int i = 0; i < entities.size(); i++)
+				entities[i]->draw();
 			break;
 		case gameStates::Menu:
 			break;
@@ -143,7 +145,7 @@ void Game::run() {
 void Game::update() {
 	// Handle key states & update stuff
 	if (keys[SDLK_w]) {
-		if (gameState == gameStates::MainMenu) {
+		if (gameState == gameStates::SceneMainMenu) {
 			gameState = gameStates::Running;
 			std::cout << "Switched game state to running" << std::endl;
 		}

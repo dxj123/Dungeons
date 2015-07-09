@@ -23,12 +23,12 @@
 #include "MainMenu.h"
 
 extern enum {
-	WINDOW_WIDTH = 640,
-	WINDOW_HEIGHT = 480,
+	WINDOW_WIDTH = 1024,
+	WINDOW_HEIGHT = 720,
 	GAME_FPS = 1000/60
 };
 
-extern Game game;
-
 extern std::vector<Entity*> entities;
 extern std::vector<Button*> buttons;
+
+extern Game game;
