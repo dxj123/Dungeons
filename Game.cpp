@@ -11,8 +11,6 @@ Game::Game() : frameSkip(0), running(0), window(NULL), renderer(NULL) {
 	Block1->y = 150;
 
 	entities.push_back(Block1);
-
-	MainMenu* mainMenu = new MainMenu();
 }
 
 Game::~Game() {
@@ -31,6 +29,8 @@ void Game::start() {
 	if (SDL_CreateWindowAndRenderer(WINDOW_WIDTH, WINDOW_HEIGHT, flags, &window, &renderer)) {
 		return;
 	}
+
+	MainMenu* mainMenu = new MainMenu();
 
 	this->running = 1;
 	run();
@@ -56,6 +56,9 @@ void Game::draw() {
 		case gameStates::Paused:
 			break;
 	}
+
+	if (this->drawScene)
+		this->drawScene();
 
 	SDL_RenderPresent(renderer);
 }
@@ -143,6 +146,9 @@ void Game::run() {
 }
 
 void Game::update() {
+	if (this->updateScene)
+		this->updateScene();
+
 	// Handle key states & update stuff
 	if (keys[SDLK_w]) {
 		

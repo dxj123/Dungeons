@@ -2,7 +2,7 @@
 
 #include "Globals.h"
 
-void Button::init(float posX, float posY, float w, float h, bool isVisible) {
+void Button::init(float posX, float posY, float w, float h, std::string img, bool isVisible) {
 	this->x = posX;
 	this->y = posY;
 	this->width = w;
@@ -13,6 +13,9 @@ void Button::init(float posX, float posY, float w, float h, bool isVisible) {
 	this->blue = 0;
 
 	this->visible = isVisible;
+
+	if (img != "") 
+		this->image = Graphics::loadImageFromFile(img);
 
 	buttons.push_back(this);
 }
@@ -25,7 +28,11 @@ void Button::draw() {
 		rect.w = this->width;
 		rect.h = this->height;
 
-		Graphics::fillRect(&rect, this->red, this->green, this->blue);
+		if (this->image) {
+			SDL_RenderCopy(game.renderer, this->image, NULL, &rect);
+		} else {
+			Graphics::fillRect(&rect, this->red, this->green, this->blue);
+		}
 	}
 }
 

@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <map>
+#include <functional>
 
 #include <SDL.h>
 
@@ -37,4 +38,8 @@ class Game {
 		int gameState;
 		SDL_Window* window;
 		SDL_Renderer* renderer;
+
+		// callbacks
+		std::function<void()> drawScene;
+		std::function<void()> updateScene;
 };
