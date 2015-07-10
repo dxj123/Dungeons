@@ -23,6 +23,7 @@
 #include "MainMenu.h"
 #include "ClassSelect.h"
 #include "Map.h"
+#include "DevMode.h"
 
 // Scenes / Floors
 #include "Floor1.h"

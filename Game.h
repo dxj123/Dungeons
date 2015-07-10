@@ -16,6 +16,7 @@ class Game {
 		~Game();
 
 		enum gameStates {
+			SceneDev,
 			SceneMainMenu,
 			SceneClassSelect,
 			SceneFloor,
@@ -44,4 +45,7 @@ class Game {
 		// callbacks
 		std::function<void()> drawScene;
 		std::function<void()> updateScene;
+		std::function<void(SDL_Event* evt)> mouseDownScene;
+		std::function<void(SDL_Event* evt)> mouseUpScene;
+		std::function<void(SDL_Event* evt)> mouseMotionScene;
 };

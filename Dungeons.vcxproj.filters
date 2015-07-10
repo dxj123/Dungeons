@@ -75,8 +75,11 @@
     <ClCompile Include="Floor1.cpp">
       <Filter>Source Files\Scenes\Floors</Filter>
     </ClCompile>
-    <ClCompile Include="Map.cpp">
+    <ClCompile Include="DevMode.cpp">
       <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files\Base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,8 +110,11 @@
     <ClInclude Include="Floor1.h">
       <Filter>Header Files\Scenes\Floors</Filter>
     </ClInclude>
-    <ClInclude Include="Map.h">
+    <ClInclude Include="DevMode.h">
       <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files\Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

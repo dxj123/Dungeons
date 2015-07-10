@@ -6,6 +6,9 @@ ClassSelect::ClassSelect() {
 	// Init callbacks
 	game.drawScene = [this]() { this->draw(); };
 	game.updateScene = [this]() { this->update(); };
+	game.mouseDownScene = [this](SDL_Event* evt) { this->mouseDown(evt); };
+	game.mouseUpScene = [this](SDL_Event* evt) { this->mouseUp(evt); };
+	game.mouseMotionScene = [this](SDL_Event* evt) { this->mouseMotion(evt); };
 
 	// Load button
 	Button* selectButton = new Button();
@@ -19,6 +22,9 @@ ClassSelect::~ClassSelect() {
 	// Remove callbacks
 	game.drawScene = []() {};
 	game.updateScene = []() {};
+	game.mouseDownScene = [](SDL_Event* evt) {};
+	game.mouseUpScene = [](SDL_Event* evt) {};
+	game.mouseMotionScene = [](SDL_Event* evt) {};
 
 	// Remove buttons
 	buttons.clear();
@@ -44,4 +50,24 @@ void ClassSelect::draw() {
 
 void ClassSelect::update() {
 
+}
+
+void ClassSelect::mouseDown(SDL_Event* evt) {
+	for (int i = 0; i < buttons.size(); i++) {
+		if (evt->button.x >= buttons[i]->x && evt->button.y >= buttons[i]->y && evt->button.x <= buttons[i]->x + buttons[i]->width && evt->button.y <= buttons[i]->y + buttons[i]->height) {
+			buttons[i]->click();
+		}
+	}
+}
+
+void ClassSelect::mouseUp(SDL_Event* evt) {
+
+}
+
+void ClassSelect::mouseMotion(SDL_Event* evt) {
+	for (int i = 0; i < buttons.size(); i++) {
+		if (evt->motion.x >= buttons[i]->x && evt->motion.y >= buttons[i]->y && evt->motion.x <= buttons[i]->x + buttons[i]->width && evt->motion.y <= buttons[i]->y + buttons[i]->height) {
+			buttons[i]->hover();
+		}
+	}
 }

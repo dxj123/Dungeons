@@ -153,21 +153,16 @@ void Game::onKeyUp(SDL_Event* evt) {
 }
 
 void Game::onMouseDown(SDL_Event* evt) {
-	for (int i = 0; i < buttons.size(); i++) {
-		if (evt->button.x >= buttons[i]->x && evt->button.y >= buttons[i]->y && evt->button.x <= buttons[i]->x + buttons[i]->width && evt->button.y <= buttons[i]->y + buttons[i]->height) {
-			buttons[i]->click();
-		}
-	}
+	if (this->mouseDownScene)
+		this->mouseDownScene(evt);
 }
 
 void Game::onMouseUp(SDL_Event* evt) {
-
+	if (this->mouseUpScene)
+		this->mouseUpScene(evt);
 }
 
 void Game::onMouseMotion(SDL_Event* evt) {
-	for (int i = 0; i < buttons.size(); i++) {
-		if (evt->motion.x >= buttons[i]->x && evt->motion.y >= buttons[i]->y && evt->motion.x <= buttons[i]->x + buttons[i]->width && evt->motion.y <= buttons[i]->y + buttons[i]->height) {
-			buttons[i]->hover();
-		}
-	}
+	if (this->mouseMotionScene)
+		this->mouseMotionScene(evt);
 }
