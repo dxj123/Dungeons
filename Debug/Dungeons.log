@@ -1,35 +1,46 @@
-﻿Build started 10-7-2015 13:56:33.
+﻿Build started 10-7-2015 16:12:03.
      1>Project "C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Dungeons\Dungeons.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Button.cpp Entity.cpp Game.cpp Globals.cpp Graphics.cpp Main.cpp MainMenu.cpp UI.cpp
-         MainMenu.cpp
-         Generating Code...
-         Compiling...
-         Game.cpp
-     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\game.cpp(47): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\game.cpp(51): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\game.cpp(167): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\game.cpp(179): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
-         Skipping... (no relevant changes detected)
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Button.cpp ClassSelect.cpp Entity.cpp Floor1.cpp Game.cpp Globals.cpp Graphics.cpp Main.cpp MainMenu.cpp Map.cpp UI.cpp
          UI.cpp
+         Map.cpp
+         MainMenu.cpp
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\mainmenu.cpp(59): warning C4018: '<' : signed/unsigned mismatch
          Main.cpp
          Graphics.cpp
          Globals.cpp
+         Game.cpp
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\game.cpp(156): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\game.cpp(168): warning C4018: '<' : signed/unsigned mismatch
+         Floor1.cpp
          Entity.cpp
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\entity.cpp(11): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\entity.cpp(12): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         ClassSelect.cpp
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\classselect.cpp(41): warning C4018: '<' : signed/unsigned mismatch
          Button.cpp
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\button.cpp(26): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\button.cpp(27): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\button.cpp(28): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\button.cpp(29): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\lorenzo\documents\projects\dungeons\dungeons\dungeons\button.cpp(34): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Generating Code...
        Link:
          F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.lib" /MACHINE:X86 Debug\Button.obj
+         Debug\ClassSelect.obj
          Debug\Entity.obj
+         Debug\Floor1.obj
          Debug\Game.obj
          Debug\Globals.obj
          Debug\Graphics.obj
          Debug\Main.obj
          Debug\MainMenu.obj
+         Debug\Map.obj
          Debug\UI.obj
+     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
          Dungeons.vcxproj -> C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Debug\Dungeons.exe
      1>Done Building Project "C:\Users\Lorenzo\Documents\Projects\Dungeons\Dungeons\Dungeons\Dungeons.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.47
+Time Elapsed 00:00:05.03

@@ -5,12 +5,6 @@
 Game::Game() : frameSkip(0), running(0), window(NULL), renderer(NULL) {
 	// Init the application
 	gameState = gameStates::SceneMainMenu;
-
-	Entity* Block1 = new Entity();
-	Block1->x = 100;
-	Block1->y = 150;
-
-	entities.push_back(Block1);
 }
 
 Game::~Game() {
@@ -42,7 +36,7 @@ void Game::draw() {
 	SDL_RenderClear(renderer);
 
 	// Render
-	switch (gameState) {
+	/*switch (gameState) {
 		case gameStates::SceneMainMenu:
 			for (int i = 0; i < buttons.size(); i++)
 				buttons[i]->draw();
@@ -55,7 +49,7 @@ void Game::draw() {
 			break;
 		case gameStates::Paused:
 			break;
-	}
+	}*/
 
 	if (this->drawScene)
 		this->drawScene();
@@ -148,11 +142,6 @@ void Game::run() {
 void Game::update() {
 	if (this->updateScene)
 		this->updateScene();
-
-	// Handle key states & update stuff
-	if (keys[SDLK_w]) {
-		
-	}
 }
 
 void Game::onKeyDown(SDL_Event* evt) {

@@ -8,11 +8,17 @@
 
 class Game {
 	public:
+		int frameSkip;
+		int running;
+		int gameState;
+
 		Game();
 		~Game();
 
 		enum gameStates {
 			SceneMainMenu,
+			SceneClassSelect,
+			SceneFloor,
 			Running,
 			Menu,
 			Paused
@@ -31,11 +37,7 @@ class Game {
 		void run();
 		void update();
 
-	//private:
 		std::map<int, int> keys;
-		int frameSkip;
-		int running;
-		int gameState;
 		SDL_Window* window;
 		SDL_Renderer* renderer;
 

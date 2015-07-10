@@ -30,7 +30,7 @@ MainMenu::~MainMenu() {
 	game.updateScene = []() {};
 
 	// Remove buttons
-	buttons.empty();
+	buttons.clear();
 
 	std::cout << "Cleaned up main menu" << std::endl;
 }
@@ -40,8 +40,10 @@ void MainMenu::onClickStart() {
 
 	delete this;
 
-	game.gameState = game.gameStates::Running;
-	std::cout << "Switched game state to running" << std::endl;
+	game.gameState = game.gameStates::SceneClassSelect;
+	ClassSelect* classSelect = new ClassSelect();
+
+	std::cout << "Switched game state to class select" << std::endl;
 }
 
 void MainMenu::onClickSettings() {
@@ -54,6 +56,9 @@ void MainMenu::onClickQuit() {
 }
 
 void MainMenu::draw() {
+	for (int i = 0; i < buttons.size(); i++)
+		buttons[i]->draw();
+
 	SDL_Rect rect;
 	rect.x = WINDOW_WIDTH / 2 - 170;
 	rect.y = WINDOW_HEIGHT / 2 - 100;

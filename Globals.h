@@ -21,6 +21,11 @@
 
 // Scenes
 #include "MainMenu.h"
+#include "ClassSelect.h"
+#include "Map.h"
+
+// Scenes / Floors
+#include "Floor1.h"
 
 extern enum {
 	WINDOW_WIDTH = 1024,
@@ -32,3 +37,4 @@ extern std::vector<Entity*> entities;
 extern std::vector<Button*> buttons;
 
 extern Game game;
+extern Map map;

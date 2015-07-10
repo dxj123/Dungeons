@@ -37,6 +37,12 @@
     <Filter Include="Source Files\Scenes">
       <UniqueIdentifier>{c0cad492-d55e-4635-8f92-0a2a4e1df6ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Scenes\Floors">
+      <UniqueIdentifier>{75a09fe5-dbdd-47e9-96de-ce673120e3f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes\Floors">
+      <UniqueIdentifier>{2cd5f723-8ddc-47e7-9144-1978120a9ee5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -63,6 +69,15 @@
     <ClCompile Include="MainMenu.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="ClassSelect.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Floor1.cpp">
+      <Filter>Source Files\Scenes\Floors</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Globals.h">
@@ -84,6 +99,15 @@
       <Filter>Header Files\UI</Filter>
     </ClInclude>
     <ClInclude Include="MainMenu.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassSelect.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Floor1.h">
+      <Filter>Header Files\Scenes\Floors</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
       <Filter>Header Files\Scenes</Filter>
     </ClInclude>
   </ItemGroup>

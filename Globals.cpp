@@ -6,3 +6,4 @@ std::vector<Entity*> entities;
 std::vector<Button*> buttons;
 
 Game game;
+Map map;
