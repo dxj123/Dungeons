@@ -6,9 +6,6 @@
 
 #include "Globals.h"
 
-const int Map::TILE_NORMAL_GROUND_1[2] = { 0, 19 };
-const int Map::TILE_NORMAL_GROUND_2[2] = { 3, 22 };
-
 Map::Map() {
 
 }
@@ -91,8 +88,8 @@ void Map::drawMap() {
 	int tileType;
 	sLocation src;
 
-	for (int y = 0; y < this->mapHeight; y++) {
-		for (int x = 0; x < this->mapWidth; x++) {
+	for (int y = this->viewPort.y1; y < this->viewPort.y2; y++) {
+		for (int x = this->viewPort.x1; x < this->viewPort.x2; x++) {
 			loc.x = x * TILE_WIDTH;
 			loc.y = y * TILE_HEIGHT;
 			loc.w = TILE_WIDTH;
@@ -114,4 +111,27 @@ void Map::drawTile(int srcX, int srcY, SDL_Rect location) {
 	newSrc.h = TILE_HEIGHT;
 
 	SDL_RenderCopy(game.renderer, this->tileSheet, &newSrc, &location);
+}
+
+void Map::setViewPort(int x1, int y1, int x2, int y2) {
+	viewPort.x1 = x1;
+	viewPort.y1 = y1;
+	viewPort.x2 = x2;
+	viewPort.y2 = y2;
+
+	this->convertViewPort();
+}
+
+void Map::convertViewPort() {
+	// Handle the viewport
+	float newX1 = floor(viewPort.x1 / TILE_WIDTH);
+	float newY1 = floor(viewPort.y1 / TILE_HEIGHT);
+
+	float newX2 = ceil(viewPort.x2 / TILE_WIDTH);
+	float newY2 = ceil(viewPort.y2 / TILE_HEIGHT);
+
+	viewPort.x1 = newX1;
+	viewPort.y1 = newY1;
+	viewPort.x2 = newX2;
+	viewPort.y2 = newY2;
 }

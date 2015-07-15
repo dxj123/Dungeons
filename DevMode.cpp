@@ -9,6 +9,7 @@ DevMode::DevMode() {
 	game.mouseUpScene = [this](SDL_Event* evt) { this->mouseUp(evt); };
 	game.mouseMotionScene = [this](SDL_Event* evt) { this->mouseMotion(evt); };
 
+	map.setViewPort(40, 40, 500, 300);
 	map.tileSheet = Graphics::loadImageFromFile("images/tiles.png");
 	map.load("maps/floor1.map");
 }
